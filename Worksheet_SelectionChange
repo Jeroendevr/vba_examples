@@ -1,0 +1,11 @@
+Private Sub Worksheet_Change(ByVal Target As Range)
+    If Target.Cells.Count > 1 Then Exit Sub
+    'In order to make sure a Target with more than one cell, for example range(A1:B1).clear does not give an error when evaluating within an IF statement
+    Application.EnableEvents = False
+    'CODE HERE
+    if target = range("named_range") then
+      'CODE HERE
+     end if
+    Application.EnableEvents = True
+    
+End Sub
